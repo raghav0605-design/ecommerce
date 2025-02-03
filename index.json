@@ -16,12 +16,12 @@
             "pr_price":"₹1200"
         },
         "prod4": {
-            "img":"images/prod_images/womanswear/sambalpuri sadi.jpg",
+            "img":"sambalpuri sadi.jpg",
             "name":"sambalpuri saree",
             "pr_price":"₹2000"
         },
         "prod5": {
-            "img":"images/prod_images/womanswear/Western dress.jpg",
+            "img":"Western dress.jpg",
             "name":"Western dress",
             "pr_price":"₹500"
         },
@@ -31,44 +31,44 @@
             "pr_price":"₹1500"
         },
         "prod7": {
-            "img":"images/prod_images/womanswear/up saree.jpg",
+            "img":"up saree.jpg",
             "name":"UP saree",
             "pr_price":"₹2000"
         },
         "prod8": {
-            "img":"images/prod_images/womanswear/silk saree.jpg",
+            "img":"silk saree.jpg",
             "name":"silk saree",
             "pr_price":"₹800"
         },
         "prod9": {
-            "img":"images/prod_images/womanswear/gray chunary.jpg",
+            "img":"gray chunary.jpg",
             "name":"Gray Chunary",
             "pr_price":"₹250"
         },
         "prod10": {
-            "img":"images/prod_images/womanswear/kurti(2).jpg",
+            "img":"kurti(2).jpg",
             "name":"kurti",
             "pr_price":"₹450"
         },
         "prod11": {
-            "img":"images/prod_images/womanswear/switer.jpg",
+            "img":"switer.jpg",
             "name":"switer",
             "pr_price":"₹1050"
         }
     },
     "menswear": {
         "prod1": {
-            "img":"images/prod_images/menswear/maroon shirt.jpg",
+            "img":"maroon shirt.jpg",
             "name":"Maroon Shirt",
             "pr_price":"₹950"
         },
         "prod2": {
-            "img":"images/prod_images/menswear/navyblue tshirt.jpg",
+            "img":"navyblue tshirt.jpg",
             "name":"Nevy blue t-shirt",
             "pr_price":"₹670"
         },
         "prod3": {
-            "img":"images/prod_images/menswear/shirtandgeans.jpg",
+            "img":"shirtandgeans.jpg",
             "name":"Shirt and geans",
             "pr_price":"₹980"
         },
@@ -78,7 +78,7 @@
             "pr_price":"₹430"
         },
         "prod5": {
-            "img":"images/prod_images/menswear/white shirt.jpg",
+            "img":"white shirt.jpg",
             "name":"White Shirt",
             "pr_price":"₹320"
         },
@@ -93,7 +93,7 @@
             "pr_price":"₹780"
         },
         "prod8": {
-            "img":"images/prod_images/menswear/white t-shirt.jpg",
+            "img":"white t-shirt.jpg",
             "name":"White t-shirt",
             "pr_price":"₹460"
         },
@@ -103,29 +103,29 @@
             "pr_price":"₹2000"
         },
         "prod10": {
-            "img":"images/prod_images/menswear/gray shoes.jpg",
+            "img":"gray shoes.jpg",
             "name":"gray shoes",
             "pr_price":"₹720"
         }
     },
     "Childrenwear": {
         "prod1": {
-            "img":"images/prod_images/children wear/lehenga choli.jpg",
+            "img":"lehenga choli.jpg",
             "name":"Lehenga Choli",
             "pr_price":"₹350"
         },
         "prod2": {
-            "img":"images/prod_images/children wear/suit.jpg",
+            "img":"suit.jpg",
             "name":"Suit ",
             "pr_price":"₹800"
         },
         "prod3": {
-            "img":"images/prod_images/children wear/Salwar Kameez.jpg",
+            "img":"Salwar Kameez.jpg",
             "name":"Salwar Kameez",
             "pr_price":"₹430"
         },
         "prod4": {
-            "img":"images/prod_images/children wear/Sharara Suit.jpg",
+            "img":"Sharara Suit.jpg",
             "name":"Sharara Suit ",
             "pr_price":"₹610"
         },
@@ -135,7 +135,7 @@
             "pr_price":"₹730"
         },
         "prod6": {
-            "img":"images/prod_images/children wear/Kurta Pajama.jpg",
+            "img":"Kurta Pajama.jpg",
             "name":"Kurta Pajama ",
             "pr_price":"₹890"
         },
@@ -155,13 +155,13 @@
             "pr_price":"₹900"
         },
         "prod10": {
-            "img":"images/prod_images/children wear/Shirt and geans pant.jpg",
+            "img":"Shirt and geans pant.jpg",
             "name":"Shirt and geans pant",
             "pr_price":"₹1100"
         },
         
         "prod11": {
-            "img":"images/prod_images/children wear/T-shirt and geans pant.jpg",
+            "img":"T-shirt and geans pant.jpg",
             "name":"T-shirt and geans pant",
             "pr_price":"₹1060"
         }
@@ -169,12 +169,12 @@
     },
     "Furniture": {
         "prod1": {
-            "img":"images/prod_images/furniture/Wooden King Size Bed with Storage.jpg",
+            "img":"Wooden King Size Bed with Storage.jpg",
             "name":"Wooden King Size Bed with Storage",
             "pr_price":"₹18,000 to ₹25,000"
         },
         "prod2": {
-            "img":"images/prod_images/furniture/Queen Size Bed with Hydraulic Storage.jpg",
+            "img":"Queen Size Bed with Hydraulic Storage.jpg",
             "name":"Queen Size Bed with Hydraulic Storage",
             "pr_price":"₹15,000 to ₹22,000"
         },
@@ -184,7 +184,7 @@
             "pr_price":"₹20,000 to ₹30,000"
         },
         "prod4": {
-            "img":"images/prod_images/furniture/Sofa Set (3+1+1) Fabric Upholstered.jpg",
+            "img":"Sofa Set (3+1+1) Fabric Upholstered.jpg",
             "name":"Sofa Set (3+1+1) Fabric Upholstered ",
             "pr_price":"₹25,000 to ₹40,000"
         },
@@ -194,17 +194,17 @@
             "pr_price":"₹18,000 to ₹35,000"
         },
         "prod6": {
-            "img":"images/prod_images/furniture/Office Work Desk with Drawers.jpg",
+            "img":"Office Work Desk with Drawers.jpg",
             "name":"Office Work Desk with Drawers",
             "pr_price":"₹8,000 to ₹15,000"
         },
         "prod7": {
-            "img":"images/prod_images/furniture/Ergonomic High-Back Office Chair.jpg",
+            "img":"Ergonomic High-Back Office Chair.jpg",
             "name":"Ergonomic High-Back Office Chair",
             "pr_price":"₹6,000 to ₹12,000"
         },
         "prod8": {
-            "img":"images/prod_images/furniture/Wooden TV Unit with Storage.jpg",
+            "img":"Wooden TV Unit with Storage.jpg",
             "name":"Wooden TV Unit with Storage",
             "pr_price":"₹10,000 to ₹20,000"
         },
@@ -219,29 +219,29 @@
             "pr_price":"₹4,000 to ₹10,000"
         },
         "prod11": {
-            "img":"images/prod_images/furniture/Shoe Rack with Seating.jpg",
+            "img":"Shoe Rack with Seating.jpg",
             "name":"Shoe Rack with Seating",
             "pr_price":"₹5,000 to ₹12,000"
         }
     },
     "Electronics": {
         "prod1": {
-            "img": "images/prod_images/Electronics/realme 5s.jpg",
+            "img": "realme 5s.jpg",
             "prod_name": "Realme 5s",
             "pr_price": "₹16000"
         },
         "prod2": {
-            "img": "images/prod_images/Electronics/moto g62 5g.jpg",
+            "img": "moto g62 5g.jpg",
             "prod_name": "moto g62 5g",
             "pr_price": "₹15000"
         },
         "prod3": {
-            "img": "images/prod_images/Electronics/samsung.jpg",
+            "img": "samsung.jpg",
             "prod_name": "Samsung galaxy j30 5g",
             "pr_price": "₹30000"
         },
         "prod4": {
-            "img": "images/prod_images/Electronics/realme.jpg",
+            "img": "realme.jpg",
             "prod_name": "Realme 5i 5g",
             "pr_price": "₹120000"
         },
@@ -256,7 +256,7 @@
             "pr_price": "₹11000"
         },
         "prod7": {
-            "img": "images/prod_images/Electronics/redmi 5g.jpg",
+            "img": "redmi 5g.jpg",
             "prod_name": "Redmi 5i",
             "pr_price": "₹30000"
         },
@@ -266,7 +266,7 @@
             "pr_price": "₹15000"
         },
         "prod9": {
-            "img": "images/prod_images/Electronics/poco m4 5g.jpg",
+            "img": "poco m4 5g.jpg",
             "prod_name": "Poco M4 5G",
             "pr_price": "₹10000"
         },
