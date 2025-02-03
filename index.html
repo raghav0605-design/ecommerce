@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/online-shop.ico" type="image/x-icon">
+    <title>E-commerce</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav0 {
+            width: auto;
+            top: 0%;
+            position: relative;
+        }
+
+        .nav1 {
+            /* top: 0%;
+            position: sticky; */
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            /* justify-content: center; */
+            justify-content: space-around;
+            /* flex-wrap: wrap; */
+            padding: 7px;
+            border-bottom: 1px solid;
+        }
+
+        .logo {
+            font-family: fantasy;
+            display: flex;
+            border: 2px black;
+            background-color: black;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-right: 7px;
+            padding-left: 7px;
+            border-radius: 5px;
+            color: orange;
+            font-weight: bolder;
+            font-size: 26px;
+        }
+
+        .nav2 {
+            /* top: 12%;
+            position: sticky; */
+            /* width: 100vw; */
+            /* justify-content: center; */
+            /* max-width: 32rem; */
+            scrollbar-width: none;
+            background-color: #ffffff;
+            display: flex;
+            /* height: 40px; */
+            align-items: center;
+            justify-content: space-evenly;
+            /* flex-wrap: wrap; */
+            padding: 7px;
+            border-bottom: 1px solid;
+            scroll-behavior: smooth;
+            overflow-y: hidden;
+            overflow-x: scroll;
+            position: relative;
+            gap: 20px;
+            /* word-break: break-all; */
+        }
+
+        .stick {
+            border: 0.2px solid silver;
+            height: 25px;
+            margin: 0px 20px;
+        }
+
+        .nav-li {
+            list-style: none;
+            font-weight: 600;
+            border: 2px solid #ededed;
+            /* border: 2px solid white; */
+
+        }
+
+        .nav-li1:hover {
+            border: 2px solid black;
+            background-color: #f0f0f0;
+        }
+
+        .nav-li:hover {
+            list-style: none;
+            font-weight: 600;
+            border: 2px solid black;
+            border-radius: 7px;
+        }
+
+        .ham {
+            display: none;
+        }
+
+        .slider0 {
+            display: flex;
+            align-items: center;
+        }
+
+        .slider {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .stick2 {
+            height: 25px;
+            border: 0.2px solid silver;
+            margin: 0px 1vw;
+        }
+
+        /* .InputContainer:hover{
+            border: 2px solid;
+        } */
+        .InputContainer {
+            border: 2px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            padding-left: 15px;
+            box-shadow: -5px 5px 46px #c1c1c1, 5px -5px 46px #ffffff;
+            /* box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075); */
+        }
+
+        .input {
+            width: 129px;
+            height: 100%;
+            border: none;
+            outline: none;
+            font-size: 0.9em;
+            caret-color: rgb(255, 81, 0);
+        }
+
+        .labelforsearch {
+            cursor: text;
+            padding: 0px 12px;
+        }
+
+        .searchIcon {
+            width: 13px;
+        }
+
+        .border {
+            height: 40%;
+            width: 1.3px;
+            background-color: rgb(223, 223, 223);
+        }
+
+        .micIcon {
+            width: 12px;
+        }
+
+        .micButton {
+            padding: 0px 15px 0px 12px;
+            border: none;
+            background-color: transparent;
+            height: 40px;
+            cursor: pointer;
+            transition-duration: .3s;
+        }
+
+        .searchIcon path {
+            fill: rgb(114, 114, 114);
+        }
+
+        .micIcon path {
+            fill: rgb(255, 81, 0);
+        }
+
+        .micButton:hover {
+            background-color: rgb(255, 230, 230);
+            transition-duration: .3s;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .cart {
+            display: grid;
+            justify-items: center;
+            padding: 0 20px;
+        }
+
+        select {
+            padding: 0px 12px;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+
+        }
+
+        main {
+            /* height: 70vh; */
+        }
+
+        h1 {
+            color: white;
+            cursor: pointer;
+        }
+
+        .sec {
+            /* height: 60vh; */
+            background-color: #181c1e;
+            background-image: url();
+            margin-bottom: 10px;
+            padding-bottom: 20px;
+            /* padding-bottom: 10px; */
+        }
+
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: start;
+            gap: 10px;
+            /* height: 35vh; */
+            justify-content: space-evenly;
+        }
+
+        .aside {
+            border: 2px solid black;
+            width: 241px;
+            display: flex;
+            overflow: hidden;
+            scroll-behavior: smooth;
+            scrollbar-width: thin;
+
+            /* width: 60%; */
+            height: 230px;
+            margin: auto;
+            margin-top: 10px;
+            box-shadow: 0px 0px 3px gray;
+            position: relative;
+            /* gap: 10px; */
+        }
+
+        .aside img {
+            width: 238px;
+            height: 236px;
+        }
+
+        img {
+            cursor: pointer;
+        }
+
+        .slide1,
+        .slide2,
+        .slide3,
+        .slide4,
+        .slide5 {
+            width: 100%;
+            height: 100%;
+            transition: 0.8s;
+            position: absolute;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            justify-items: center;
+            /* padding: 10px;  */
+        }
+
+        .cards {
+            margin-top: 10px;
+            border: 1px solid;
+            width: fit-content;
+            padding: 10px;
+            display: grid;
+            justify-items: center;
+            border-radius: 5px;
+            background-color: rgb(251 251 251);
+            box-shadow: 0px 0px 3px #818181;
+        }
+
+        .img {
+            border: .12px solid;
+            box-shadow: 0px 0px 3px #4a3a3a;
+            /* width: 23vw; */
+            border-radius: 2px;
+        }
+
+        .img>img {
+            width: 318px;
+            height: 330px;
+            object-fit: scale-down;
+        }
+
+        .proname {
+            height: 23px;
+            overflow-y: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 10px;
+        }
+
+        .footer0 {
+            border-bottom: 1px solid white;
+            padding: 10px;
+            text-align: center;
+            background-color: #455054;
+            /* background-color: #00bbff; */
+        }
+
+        .footer0:hover {
+            text-decoration: underline;
+            color: white;
+            /* background-color: #00bbff; */
+        }
+
+        .footer01 {
+            /* border: 2px; */
+            /* padding: 10px; */
+            /* text-align: center; */
+            background-color: #323a3c;
+            /* background-color: #00bbff; */
+            display: flex;
+            gap: 10px;
+        }
+
+        .p {
+            color: white;
+
+        }
+
+        .footer1 {
+            /* position: ; */
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
+            background-color: #181c1e;
+            height: 290px;
+            color: white;
+            display: flex;
+            padding: 50px 0px;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        .footer2 {
+            /* bottom: 0%;
+            position: fixed; */
+            background-color: #181c1e;
+            border: 1px solid;
+            height: 58px;
+
+        }
+
+        .p5 {
+            color: white;
+            font-weight: bolder;
+            font-size: 30px;
+            text-decoration: underline;
+        }
+
+        .box3 {
+            /* border: 2px solid black; */
+            /* height: 200px; */
+        }
+
+        .box4 {
+            /* top: 0%;
+            position: absolute;
+            border: 2px solid black;
+            height: 0px;
+            transition: all 2s ease-in-out .2s; */
+            /* visibility: hidden; */
+            /* width: 10px; */
+
+        }
+
+        .box3:hover {
+            /* height: 200px;
+            background-color: red; */
+            /* visibility: visible; */
+        }
+
+        .box4:hover {
+            /* height: 200px;
+            top: 50%;
+            position: absolute; */
+            /* background-color: red; */
+            /* visibility: hidden; */
+        }
+
+        h4,
+        h5 {
+            font-size: medium;
+            font-weight: bolder;
+            /* background-color: aqua; */
+
+        }
+
+        h4:hover {
+            text-decoration: underline;
+            /* background-color: aqua; */
+
+        }
+
+        h5:hover {
+            text-decoration: underline;
+            /* background-color: aqua; */
+
+        }
+
+
+        @media screen and (max-width:1300px) {
+            .slider0 {
+                gap: 20px;
+            }
+
+            .slider {
+                gap: 19px;
+            }
+
+            .products {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
+            .img>img {
+                /* width: 34vw; */
+            }
+        }
+
+        @media screen and (max-width:1070px) {
+            .slider0 {
+                gap: 10px;
+            }
+
+            .slider {
+                gap: 13px;
+            }
+
+            .products {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .img>img {
+                width: 34vw;
+            }
+        }
+
+        @media screen and (max-width:750px) {
+        .slider0{
+            gap: 0.65rem;
+        }
+        .slider{
+            border: 1px solid;
+            padding: 4px;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+            .nav1 {
+                display: grid;
+            }
+
+            .ham {
+                display: block;
+            }
+
+            .slider {
+                display: none;
+                justify-content: end;
+                justify-items: end;
+
+            }
+
+            .stick {
+                display: none;
+                
+                /* height: 25px; */
+            }
+
+            .stick1 {
+                display: none;
+                /* height: 25px; */
+            }
+
+            .stick2 {
+                /* display: none; */
+                border: none;
+                border-bottom: 0.2px solid silver;
+                width: 60vw;
+            }
+
+        }
+
+        @media screen and (max-width:720px) {
+            .logo {
+                font-size: 19px;
+            }
+
+            .nav0 {
+                position: static;
+            }
+
+            .products {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .img>img {
+                width: 234px;
+            }
+        }
+
+
+
+        @media screen and (max-width:650px) {
+
+
+            /* .aside {
+                width: 280px;
+            } */
+        }
+
+        @media screen and (max-width:450px) {
+            .flex {
+                /* display: grid; */
+            }
+
+            .footer1 {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                justify-items: center;
+                gap: 20px;
+                height: 35rem;
+            }
+
+            .nav1 {
+                justify-content: space-around;
+            }
+
+            .input {
+                width: 113px;
+            }
+
+        }
+
+        @media screen and (max-width:380px) {
+            .input {
+                width: 105px;
+            }
+        }
+
+        @media screen and (max-width:340px) {
+            .logo {
+                font-size: 18px;
+            }
+
+            .input {
+                width: 55px;
+            }
+
+            /* .nav-li1 {
+                font-size: x-large;
+            } */
+        }
+    </style>
+</head>
+
+<body>
+    <a name="head"></a>
+    <nav class="nav0">
+
+        <nav class="nav1">
+            <div class="slider0">
+
+                <!-- <li class="navli"
+                style="border: 1px solid blue ; padding-top: 5px;padding-bottom: 5px; padding-right: 7px; padding-left: 7px; border-radius: 5px; color: orange; text-decoration: underline;">
+                E-COMMERCE</li> -->
+
+                <li class="nav-li nav-li1 logo" style="  ">
+                    <span style="color: orange; text-decoration: underline; ">E-CO</span>
+                    <span style="color: rgb(180, 178, 178); text-decoration: underline;">MME</span>
+                    <span style="color: green; text-decoration: underline;">RCE</span>
+                </li>
+                <li class="stick stick1"></li>
+                <li class="nav-li">
+
+                    <div class=" InputContainer">
+                        <input type="text" name="text" class="input" id="input" placeholder="Search">
+
+                        <label for="input" class="labelforsearch">
+                            <svg viewBox="0 0 512 512" class="searchIcon">
+                                <path
+                                    d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z">
+                                </path>
+                            </svg>
+                        </label>
+                        <div class="border"></div>
+
+                        <button class="micButton"><svg viewBox="0 0 384 512" class="micIcon">
+                                <path
+                                    d="M192 0C139 0 96 43 96 96V256c0 53 43 96 96 96s96-43 96-96V96c0-53-43-96-96-96zM64 216c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c0 89.1 66.2 162.7 152 174.4V464H120c-13.3 0-24 10.7-24 24s10.7 24 24 24h72 72c13.3 0 24-10.7 24-24s-10.7-24-24-24H216V430.4c85.8-11.7 152-85.3 152-174.4V216c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c0 70.7-57.3 128-128 128s-128-57.3-128-128V216z">
+                                </path>
+                            </svg>
+                        </button>
+
+                    </div>
+                </li>
+
+
+                <div class="ham">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 5L20 5" stroke="#141B34" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M4 12L20 12" stroke="#141B34" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M4 19L20 19" stroke="#141B34" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+
+                </div>
+            </div>
+
+            <div class="slider">
+                <li class="stick2" style=" "></li>
+                <li class=" "><a class="nav-li btn btn-primary signup " href="sign up.html">Sign Up</a></li>
+                <li class="stick2"></li>
+                <li class=" "><a class="nav-li btn btn-primary login" href="log in.html">Log in</a></li>
+                <li class="stick2"></li>
+
+                <li class="nav-li nav-li1">
+                    <div class="cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="25" height="25"
+                            color="#000000" fill="none">
+                            <path d="M8 16L16.7201 15.2733C19.4486 15.046 20.0611 14.45 20.3635 11.7289L21 6"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                            <path d="M6 6H6.5M22 6H19.5" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" />
+                            <path d="M9.5 6H16.5M13 9.5V2.5" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" />
+                            <circle cx="6" cy="20" r="2" stroke="currentColor" stroke-width="1.5" />
+                            <circle cx="17" cy="20" r="2" stroke="currentColor" stroke-width="1.5" />
+                            <path d="M8 20L15 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                            <path
+                                d="M2 2H2.966C3.91068 2 4.73414 2.62459 4.96326 3.51493L7.93852 15.0765C8.08887 15.6608 7.9602 16.2797 7.58824 16.7616L6.63213 18"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                        </svg>
+
+                        Card
+                    </div>
+                </li>
+            </div>
+        </nav>
+        <nav class="nav2">
+            <!-- <div class="div0">
+                <div class="div1">
+                    <div class="div2">Woman's</div>
+                    <div class="div3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" color="#000000" fill="none">
+                        <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg></div>
+                </div>
+                <div class="div4"></div>
+            </div> -->
+
+            <!-- <p class="">
+                <select name="" id="">
+                    <option value=""><a href="http://">Woman's</a></option>
+                    <option value=""><a href="http://">abc</a></option>
+                    <option value=""><a href="http://">abc</a></option>
+                    <option value=""><a href="http://">abc</a></option>
+                    <option value=""><a href="http://">abc</a></option>
+                </select>
+            </p>
+            <p class="">
+                <select name="" id="">
+                    <option value=""><a href="http://">Man's</a></option>
+                    <option value=""><a href="http://"></a></option>
+                    <option value=""><a href="http://"></a></option>
+                    <option value=""><a href="http://"></a></option>
+                    <option value=""><a href="http://"></a></option>
+                </select>
+            </p>
+            <p class="">
+                <select name="" id="">
+                    <option value=""><a href="http://"></a></option>
+                    <option value=""><a href="http://"></a></option>
+                    <option value=""><a href="http://"></a></option>
+                    <option value=""><a href="http://"></a></option>
+                    <option value=""><a href="http://"></a></option>
+                </select>
+            </p>
+            <p class="">
+                <select name="" id="">
+                    <option value=""><a href="http://"></a></option>
+                    <option value=""><a href="http://"></a></option>
+                    <option value=""><a href="http://"></a></option>
+                    <option value=""><a href="http://"></a></option>
+                    <option value=""><a href="http://"></a></option>
+                </select>
+            </p>
+            <p class="">
+                <select name="" id="">
+                    <option value=""><a href="http://"></a></option>
+                    <option value=""><a href="http://"></a></option>
+                    <option value=""><a href="http://"></a></option>
+                    <option value=""><a href="http://"></a></option>
+                    <option value=""><a href="http://"></a></option>
+                </select>
+            </p>
+            <p class="">
+                <select name="" id="">
+                    <option value=""><a href="http://"></a></option>
+                    <option value=""><a href="http://"></a></option>
+                    <option value=""><a href="http://"></a></option>
+                    <option value=""><a href="http://"></a></option>
+                    <option value=""><a href="http://"></a></option>
+                </select>
+            </p>
+            <p class="">
+                <select name="" id="">
+                    <option value=""><a href="http://"></a></option>
+                    <option value=""><a href="http://"></a></option>
+                    <option value=""><a href="http://"></a></option>
+                    <option value=""><a href="http://"></a></option>
+                    <option value=""><a href="http://"></a></option>
+                </select>
+            </p>
+            <p class="">
+                <select name="" id="">
+                    <option value=""><a href="http://"></a></option>
+                    <option value=""><a href="http://"></a></option>
+                    <option value=""><a href="http://"></a></option>
+                    <option value=""><a href="http://"></a></option>
+                    <option value=""><a href="http://"></a></option>
+                </select>
+            </p>
+            <p class="">
+                <select name="" id="">
+                    <option value=""><a href="http://"></a></option>
+                    <option value=""><a href="http://"></a></option>
+                    <option value=""><a href="http://"></a></option>
+                    <option value=""><a href="http://"></a></option>
+                    <option value=""><a href="http://"></a></option>
+                </select>
+            </p>
+            <p class="">
+                <select name="" id="">
+                    <option value=""><a href="http://"></a></option>
+                    <option value=""><a href="http://"></a></option>
+                    <option value=""><a href="http://"></a></option>
+                    <option value=""><a href="http://"></a></option>
+                    <option value=""><a href="http://"></a></option>
+                </select>
+            </p> -->
+
+        </nav>
+    </nav>
+    <main>
+        <section class="sec sec1">
+            <h1 style="margin-bottom: 20px;">Woman's wear</h1>
+            <div class="flex">
+                <img src="IMG-20240405-WA0012.jpg" class="img0" height="290px" width="318px" alt="" srcset="">
+                <div class="grid">
+                    <aside class="aside">
+                        <div class="box box1"><img src="kurti.jpg" alt="" srcset="" class="slide1"></div>
+                        <div class="box box2"><img src="brown dress.jpg" alt="" srcset="" class="slide1"></div>
+                        <div class="box box3"><img src="mp saree.jpg" alt="" srcset="" class="slide1"></div>
+                        <div class="box box4"><img src="IMG-20240405-WA0012.jpg" alt="" srcset="" class="slide1"></div>
+                    </aside>
+                    <center> <svg onclick="goPrev1()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32"
+                            height="32" color="white" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" />
+                            <path d="M13.5 16C13.5 16 10.5 13.054 10.5 12C10.5 10.9459 13.5 8 13.5 8"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <svg onclick="goNext1()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32"
+                            height="32" color="white" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" />
+                            <path d="M10.5 8C10.5 8 13.5 10.946 13.5 12C13.5 13.0541 10.5 16 10.5 16"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </center>
+                </div>
+            </div>
+        </section>
+        <!-- <button class="btn click1 btn-primary">Click</button> -->
+
+        <section class="sec sec2">
+            <h1>Man's wear</h1>
+            <div class="flex">
+                <img src="download.jpeg" class="img0" height="290px" width="318px" alt="" srcset="">
+                <div class="grid">
+
+                    <aside class="aside">
+                        <div class="box box1"><img src="black blazer.jpg" alt="" srcset="" class="slide2"></div>
+                        <div class="box box2"><img src="black jacket.jpg" alt="" srcset="" class="slide2"></div>
+                        <div class="box box3"><img src="black lower.jpg" alt="" srcset="" class="slide2"></div>
+                        <div class="box box4"><img src="gray geans pant.jpg" alt="" srcset="" class="slide2"></div>
+                        <!-- <div class="box box5"></div> -->
+                    </aside>
+                    <center> <svg onclick="goPrev2()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32"
+                            height="32" color="white" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" />
+                            <path d="M13.5 16C13.5 16 10.5 13.054 10.5 12C10.5 10.9459 13.5 8 13.5 8"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <svg onclick="goNext2()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32"
+                            height="32" color="white" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" />
+                            <path d="M10.5 8C10.5 8 13.5 10.946 13.5 12C13.5 13.0541 10.5 16 10.5 16"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </center>
+                </div>
+            </div>
+        </section>
+        <section class="sec sec2">
+            <h1>Children wear</h1>
+            <div class="flex">
+                <img src="download (1).jpeg" class="img0" height="290px" width="318px" alt="" srcset="">
+                <div class="grid">
+
+                    <aside class="aside">
+                        <div class="box box1"><img src="Angrakha Kurta.jpg" alt="" srcset="" class="slide3"></div>
+                        <div class="box box2"><img src="BlueSherwani.jpg" alt="" srcset="" class="slide3"></div>
+                        <div class="box box3"><img src="Dhoti Kurta.jpg" alt="" srcset="" class="slide3"></div>
+                        <div class="box box4"><img src="Gharara Suit.jpg" alt="" srcset="" class="slide3"> </div>
+                        <!-- <div class="box box5"></div> -->
+                    </aside>
+                    <center> <svg onclick="goPrev3()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32"
+                            height="32" color="white" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" />
+                            <path d="M13.5 16C13.5 16 10.5 13.054 10.5 12C10.5 10.9459 13.5 8 13.5 8"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <svg onclick="goNext3()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32"
+                            height="32" color="white" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" />
+                            <path d="M10.5 8C10.5 8 13.5 10.946 13.5 12C13.5 13.0541 10.5 16 10.5 16"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </center>
+                </div>
+            </div>
+        </section>
+        <section class="sec sec2">
+            <h1>Furniture</h1>
+            <div class="flex">
+                <img src="IMG-20240405-WA0016.jpg" class="img0" height="290px" width="318px" alt="" srcset="">
+                <div class="grid">
+
+                    <aside class="aside">
+                        <div class="box box1"><img src="4-Door Wooden Wardrobe with Mirror.jpg" alt="" srcset=""
+                                class="slide4"></div>
+                        <div class="box box2"><img src="Bookshelf with Glass Doors.jpg" alt="" srcset="" class="slide4">
+                        </div>
+                        <div class="box box3"><img src="Coffee Table with Storage.jpg" alt="" srcset="" class="slide4">
+                        </div>
+                        <div class="box box4"><img src="Dining Table Set (6 Seater) with Chairs.jpg" alt="" srcset=""
+                                class="slide4">
+                        </div>
+                        <!-- <div class="box box5"></div> -->
+                    </aside>
+                    <center> <svg onclick="goPrev4()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32"
+                            height="32" color="white" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" />
+                            <path d="M13.5 16C13.5 16 10.5 13.054 10.5 12C10.5 10.9459 13.5 8 13.5 8"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <svg onclick="goNext4()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32"
+                            height="32" color="white" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" />
+                            <path d="M10.5 8C10.5 8 13.5 10.946 13.5 12C13.5 13.0541 10.5 16 10.5 16"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </center>
+                </div>
+            </div>
+        </section>
+        <section class="sec sec2">
+            <h1>Electronics</h1>
+            <div class="flex">
+                <img src="IMG-20240405-WA0015.jpg" class="img0" height="290px" width="318px" alt="" srcset="">
+                <div class="grid">
+
+                    <aside class="aside">
+                        <div class="box box1"><img src="infinix hot 20i.jpg" alt="" srcset="" class="slide5"></div>
+                        <div class="box box2"><img src="Lava blaze3.jpg" alt="" srcset="" class="slide5"></div>
+                        <div class="box box3"><img src="lenevo.jpg" alt="" srcset="" class="slide5"></div>
+                        <div class="box box4"><img src="micromex.jpg" alt="" srcset="" class="slide5"></div>
+                        <!-- <div class="box box5"></div> -->
+                    </aside>
+                    <center> <svg onclick="goPrev5()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32"
+                            height="32" color="white" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" />
+                            <path d="M13.5 16C13.5 16 10.5 13.054 10.5 12C10.5 10.9459 13.5 8 13.5 8"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <svg onclick="goNext5()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32"
+                            height="32" color="white" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" />
+                            <path d="M10.5 8C10.5 8 13.5 10.946 13.5 12C13.5 13.0541 10.5 16 10.5 16"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </center>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="products">
+            <!-- <div class="cards">
+                <div class="img"><img src="IMG-20240405-WA0015.jpg" alt="" srcset=""></div>
+                <div class="proname">Samsung galaxy rn20</div>
+                <p>₹23000/-</p>
+                <div class="" >
+                    <button class="price btn btn-success click1" id="price1">Show Details</button>
+                    <button class="btn click2 btn-primary" id="price1">Add to Card</button>
+                </div>
+            </div> -->
+        </section>
+    </main>
+    <footer style="bottom: 0%;">
+
+        <footer class="footer0">
+
+            <a href="#head" style="text-decoration: none; color: white;">Back to Top</a>
+        </footer>
+        <footer class="footer01">
+            <p class="p p1"><svg style="filter: invert(1);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                    width="16" height="16" color="#000000" fill="none">
+                    <path
+                        d="M9.1585 5.71223L8.75584 4.80625C8.49256 4.21388 8.36092 3.91768 8.16405 3.69101C7.91732 3.40694 7.59571 3.19794 7.23592 3.08785C6.94883 3 6.6247 3 5.97645 3C5.02815 3 4.554 3 4.15597 3.18229C3.68711 3.39702 3.26368 3.86328 3.09497 4.3506C2.95175 4.76429 2.99278 5.18943 3.07482 6.0397C3.94815 15.0902 8.91006 20.0521 17.9605 20.9254C18.8108 21.0075 19.236 21.0485 19.6496 20.9053C20.137 20.7366 20.6032 20.3131 20.818 19.8443C21.0002 19.4462 21.0002 18.9721 21.0002 18.0238C21.0002 17.3755 21.0002 17.0514 20.9124 16.7643C20.8023 16.4045 20.5933 16.0829 20.3092 15.8362C20.0826 15.6393 19.7864 15.5077 19.194 15.2444L18.288 14.8417C17.6465 14.5566 17.3257 14.4141 16.9998 14.3831C16.6878 14.3534 16.3733 14.3972 16.0813 14.5109C15.7762 14.6297 15.5066 14.8544 14.9672 15.3038C14.4304 15.7512 14.162 15.9749 13.834 16.0947C13.5432 16.2009 13.1588 16.2403 12.8526 16.1951C12.5071 16.1442 12.2426 16.0029 11.7135 15.7201C10.0675 14.8405 9.15977 13.9328 8.28011 12.2867C7.99738 11.7577 7.85602 11.4931 7.80511 11.1477C7.75998 10.8414 7.79932 10.457 7.90554 10.1663C8.02536 9.83828 8.24905 9.56986 8.69643 9.033C9.14586 8.49368 9.37058 8.22402 9.48939 7.91891C9.60309 7.62694 9.64686 7.3124 9.61719 7.00048C9.58618 6.67452 9.44362 6.35376 9.1585 5.71223Z"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                </svg> +91xxxxxxxxxxx</p>
+            <p class="p p2">lorem@gmail.com</p>
+            <p class="p p3"></p>
+
+        </footer>
+        <footer class="footer footer1">
+            <div>
+                <h4 style="font-family: sans-serif;">Get to Know Us</h4>
+                <h5 style="font-family: sans-serif;">Careers</h5>
+                <h5 style="font-family: sans-serif;">Blog</h5>
+                <h5 style="font-family: sans-serif;">About Amazon</h5>
+                <h5 style="font-family: sans-serif;">Investor Relation</h5>
+                <h5 style="font-family: sans-serif;">Amazon Devlces</h5>
+                <h5 style="font-family: sans-serif;">Amazon Science</h5>
+            </div>
+            <div>
+                <h4 style="font-family: sans-serif;">Connect with Us</h4>
+                <h5 style="font-family: sans-serif;">Facebook</h5>
+                <h5 style="font-family: sans-serif;">Twitter</h5>
+                <h5 style="font-family: sans-serif;">Instagram</h5>
+            </div>
+            <div>
+                <h4 style="font-family: sans-serif;">Get to Know Us</h4>
+                <h5 style="font-family: sans-serif;">Careers</h5>
+                <h5 style="font-family: sans-serif;">Blog</h5>
+                <h5 style="font-family: sans-serif;">About Amazon</h5>
+                <h5 style="font-family: sans-serif;">Investor Relation</h5>
+                <h5 style="font-family: sans-serif;">Amazon Devlces</h5>
+                <h5 style="font-family: sans-serif;">Amazon Science</h5>
+            </div>
+            <div>
+                <h4 style="font-family: sans-serif;">About Us</h4>
+                <h5 style="font-family: sans-serif;"> +91xxxxxxxxxxx</h5>
+                <h5 style="font-family: sans-serif;">lorem@gmail.com</h5>
+            </div>
+
+
+        </footer>
+        <footer class="footer footer2">
+            <!-- <center><img src="logo.jpg" height="55" width="155" alt="" srcset=""></center> -->
+            <!-- <center style="display: flex; justify-content: center;">
+            <p class="p5">E-CO</p>
+            <p class="p5" style="color: white;">MME</p>
+            <p class="p5" style="color: white;">RCE</p>
+        </center> -->
+            <!-- <button class="btn click1 btn-primary">Click</button>
+        <button class="btn click2 btn-primary">Click</button>
+        <button class="btn click3 btn-primary">Click</button>
+        <button class="btn click4 btn-primary">Click</button> -->
+            <center>
+                <p class="p5">E-COMMERCE</p>
+            </center>
+        </footer>
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+
+
+            $(".cart").click(function () {
+                window.location = "your_cards.html"
+            });
+            $(".box").click(function () {
+                window.location = "prod_details.html"
+            });
+
+            $().click(function () {
+                $(".div4").slideToggle();
+            });
+            $(".ham").click(function () {
+                $(".slider").slideToggle(500);
+                $(".slider").css("display", "grid", "background-color", "red");
+
+            });
+            $(".img0").click(function () { 
+                window.location="prod_details.html"
+                
+            });
+        });
+
+        //for calling product details. 
+        const moiveBox = document.querySelector(".products")
+        async function get1() {
+            let a = await fetch("index.json")
+            let b = await a.json()
+            console.log(b)
+            show1(b.womenswear)
+            show2(b.menswear)
+            show3(b.Childrenwear)
+            show4(b.Furniture)
+            show5(b.Electronics)
+            $(".click1").click(function () {
+                window.location = "products_show.html"
+
+                alert("hii")
+            });
+            $(".click2").click(function () {
+                window.location = "your_cards.html"
+
+                alert("hii")
+            });
+            // document.querySelector(".click1").addEventListener("click", () =>  {
+            //     window.location = "products_show.html"
+            // })
+            // document.querySelector(".click2").addEventListener("click", () =>  {
+            //     window.location = "your_cards.html"
+            // })
+        }
+        function show1(womenswear) {
+            if (typeof womenswear === 'object' && !Array.isArray(womenswear)) {
+                womenswear = Object.values(womenswear);
+            }
+            if (Array.isArray(womenswear)) {
+                womenswear.forEach(item => {
+                    console.log(womenswear)
+                    const box = document.createElement("div")
+
+                    box.classList.add("box")
+                    box.innerHTML = `  <div class="cards">
+                         <div class="img"><img src="${item.img}" alt="" srcset=""></div>
+                         <div class="proname">${item.name}</div>
+                         <p>${item.pr_price}/-</p>
+                         <div class="" >
+                             <button class="price btn btn-success click1" id="price1">Show Details</button>
+                             <button class="btn click2 btn-primary" id="price1">Add to Card</button>
+                         </div>
+                     </div>`
+                    // let html=
+                    // document.querySelector(".products").innerHTML=document.querySelector(".products").innerHTML + html
+                    moiveBox.appendChild(box)
+                });
+            } else {
+                console.error("womenswear is not an array:", womenswear);
+            }
+        }
+        function show2(menswear) {
+            if (typeof menswear === 'object' && !Array.isArray(menswear)) {
+                menswear = Object.values(menswear);
+            }
+            if (Array.isArray(menswear)) {
+                menswear.forEach(item => {
+                    console.log(menswear)
+                    const box = document.createElement("div")
+
+                    box.classList.add("box")
+                    box.innerHTML = `  <div class="cards">
+                        <div class="img"><img src="${item.img}" alt="" srcset=""></div>
+                        <div class="proname">${item.name}</div>
+                        <p>${item.pr_price}/-</p>
+                        <div class="" >
+                            <button class="price btn btn-success click1" id="price1">Show Details</button>
+                            <button class="btn click2 btn-primary" id="price1">Add to Card</button>
+                            </div>
+                            </div>`
+                    // let html=
+                    // document.querySelector(".products").innerHTML=document.querySelector(".products").innerHTML + html
+                    moiveBox.appendChild(box)
+                });
+            } else {
+                console.error("menswear is not an array:", menswear);
+            }
+        }
+
+        function show3(Childrenwear) {
+            if (typeof Childrenwear === 'object' && !Array.isArray(Childrenwear)) {
+                Childrenwear = Object.values(Childrenwear);
+            }
+            if (Array.isArray(Childrenwear)) {
+                Childrenwear.forEach(item => {
+                    console.log(Childrenwear)
+                    const box = document.createElement("div")
+
+                    box.classList.add("box")
+                    box.innerHTML = `  <div class="cards">
+                         <div class="img"><img src="${item.img}" alt="" srcset=""></div>
+                         <div class="proname">${item.name}</div>
+                         <p>${item.pr_price}/-</p>
+                         <div class="" >
+                             <button class="price btn btn-success click1" id="price1">Show Details</button>
+                             <button class="btn click2 btn-primary" id="price1">Add to Card</button>
+                         </div>
+                         </div>`
+                    // let html=
+                    // document.querySelector(".products").innerHTML=document.querySelector(".products").innerHTML + html
+                    moiveBox.appendChild(box)
+                });
+            } else {
+                console.error("Childrenwear is not an array:", Childrenwear);
+            }
+        }
+        function show4(Furniture) {
+            if (typeof Furniture === 'object' && !Array.isArray(Furniture)) {
+                Furniture = Object.values(Furniture);
+            }
+            if (Array.isArray(Furniture)) {
+                Furniture.forEach(item => {
+                    console.log(Furniture)
+                    const box = document.createElement("div")
+
+                    box.classList.add("box")
+                    box.innerHTML = `  <div class="cards">
+                                <div class="img"><img src="${item.img}" alt="" srcset=""></div>
+                                <div class="proname">${item.name}</div>
+                                  <p>${item.pr_price}/-</p>
+                                  <div class="" >
+                                      <button class="price btn btn-success click1" id="price1">Show Details</button>
+                                      <button class="btn click2 btn-primary" id="price1">Add to Card</button>
+                                  </div>
+                              </div>`
+                    // let html=
+                    // document.querySelector(".products").innerHTML=document.querySelector(".products").innerHTML + html
+                    moiveBox.appendChild(box)
+                });
+            } else {
+                console.error("Furniture is not an array:", Furniture);
+            }
+        }
+        function show5(Electronics) {
+            if (typeof Electronics === 'object' && !Array.isArray(Electronics)) {
+                Electronics = Object.values(Electronics);
+            }
+            if (Array.isArray(Electronics)) {
+                Electronics.forEach(item => {
+                    console.log(Electronics)
+                    const box = document.createElement("div")
+
+                    box.classList.add("box")
+                    box.innerHTML = `  <div class="cards">
+                         <div class="img"><img src="${item.img}" alt="" srcset=""></div>
+                         <div class="proname">${item.prod_name}</div>
+                         <p>${item.pr_price}/-</p>
+                         <div class="" >
+                            <button class="price btn btn-success click1" id="price1">Show Details</button>
+                             <button class="btn click2 btn-primary" id="price1">Add to Card</button>
+                             </div>
+                     </div>`
+                    // let html=
+                    // document.querySelector(".products").innerHTML=document.querySelector(".products").innerHTML + html
+                    moiveBox.appendChild(box)
+                });
+            } else {
+                console.error("Electronics is not an array:", Electronics);
+            }
+        }
+
+        get1()
+
+        //for image slider
+
+        const slides1 = document.querySelectorAll(".slide1")
+        var counter1 = 0;
+        slides1.forEach(
+            (slide1, index) => {
+                slide1.style.left = `${index * 100}%`
+                // slide.style.left=`translateX(${index*100}%)`
+            }
+        )
+        const goPrev1 = () => {
+            counter1--
+            slideImage1()
+        }
+        const goNext1 = () => {
+            counter1++
+            slideImage1()
+        }
+        const slideImage1 = () => {
+            slides1.forEach(
+                (slide1) => {
+                    if (counter1 < slides1.length) {
+                        slide1.style.transform = `translateX(-${counter1 * 100}%)`
+                    }
+                }
+            )
+        }
+        const slides2 = document.querySelectorAll(".slide2")
+        var counter2 = 0;
+        slides2.forEach(
+            (slide2, index) => {
+                slide2.style.left = `${index * 100}%`
+                // slide.style.left=`translateX(${index*100}%)`
+            }
+        )
+        const goPrev2 = () => {
+            counter2--
+            slideImage2()
+        }
+        const goNext2 = () => {
+            counter2++
+            slideImage2()
+        }
+        const slideImage2 = () => {
+            slides2.forEach(
+                (slide2) => {
+                    if (counter2 < slides2.length) {
+                        slide2.style.transform = `translateX(-${counter2 * 100}%)`
+                    }
+                }
+            )
+        }
+        const slides3 = document.querySelectorAll(".slide3")
+        var counter3 = 0;
+        slides3.forEach(
+            (slide3, index) => {
+                slide3.style.left = `${index * 100}%`
+                // slide.style.left=`translateX(${index*100}%)`
+            }
+        )
+        const goPrev3 = () => {
+            counter3--
+            slideImage3()
+        }
+        const goNext3 = () => {
+            counter3++
+            slideImage3()
+        }
+        const slideImage3 = () => {
+            slides3.forEach(
+                (slide3) => {
+                    if (counter3 < slides3.length) {
+                        slide3.style.transform = `translateX(-${counter3 * 100}%)`
+                    }
+                }
+            )
+        }
+        const slides4 = document.querySelectorAll(".slide4")
+        var counter4 = 0;
+        slides4.forEach(
+            (slide4, index) => {
+                slide4.style.left = `${index * 100}%`
+                // slide.style.left=`translateX(${index*100}%)`
+            }
+        )
+        const goPrev4 = () => {
+            counter4--
+            slideImage4()
+        }
+        const goNext4 = () => {
+            counter4++
+            slideImage4()
+        }
+        const slideImage4 = () => {
+            slides4.forEach(
+                (slide4) => {
+                    if (counter4 < slides4.length) {
+                        slide4.style.transform = `translateX(-${counter4 * 100}%)`
+                    }
+                }
+            )
+        }
+        const slides5 = document.querySelectorAll(".slide5")
+        var counter5 = 0;
+        slides5.forEach(
+            (slide5, index) => {
+                slide5.style.left = `${index * 100}%`
+                // slide.style.left=`translateX(${index*100}%)`
+            }
+        )
+        const goPrev5 = () => {
+            counter5--
+            slideImage5()
+        }
+        const goNext5 = () => {
+            counter5++
+            slideImage5()
+        }
+        const slideImage5 = () => {
+            slides5.forEach(
+                (slide5) => {
+                    if (counter5 < slides5.length) {
+                        slide5.style.transform = `translateX(-${counter5 * 100}%)`
+                    }
+                }
+            )
+        }
+
+    </script>
+</body>
+
+</html>
